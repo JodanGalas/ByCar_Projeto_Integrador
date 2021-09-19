@@ -19,7 +19,7 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
   </strong>
 </p>
 <p align="center">
-  ByCAr_Projeto_Integrador é um projeto de um App utilizando as tecnologias Expo, React Native e Node Js. Visando a compra e venda de carros seguindo cadastros prévios ou de importação de dados em csv.
+  ByCAr é um projeto de um Aplicativo Mobile, onde o foco é um portal de anuncios e venda de carro.
 </p>
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
