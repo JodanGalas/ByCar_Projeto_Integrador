@@ -133,7 +133,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/BackLog_Bycar.jpeg" width="900" height="500" />
+    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/BackLog_Bycar.jpeg" width="900" height="250" />
   </a>
 </p>
 
