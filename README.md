@@ -59,13 +59,11 @@ O layout da aplicação está disponível no Figma:
 * [O que é a ByCar](#o-que-é-a-ByCar)
 * [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
 * [Benefícios](#benefícios)
-* [Documentação do Projeto](#Documentação-do-Projeto)
 * [Product Backlog](#product-backlog)
 * [Tecnologias](#tecnologias)
 * [Links de Entregas](#links-de-entregas)
 * [Features](#features)
-* [Funcionamento do sistema]()
-* [Testes do software]()
+
 
 ## O que é ByCAr
 ByCar é um App de anuncios e venda de carros, onde o vendedor pode se comunicar com comprador em tempo real, podendo monitorar, pausar e despausar o anúncio.  
