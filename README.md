@@ -24,8 +24,8 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
   </a>
-  <a href="https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.1.0.0">
-    <img src="https://img.shields.io/github/v/tag/iterative/setup-cml?label=GitHub%20Actions&logo=GitHub" alt="https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.1.0.0" />
+  <a href="">
+    <img src="https://img.shields.io/github/v/tag/iterative/setup-cml?label=GitHub%20Actions&logo=GitHub" alt="" />
   </a>
   
 
