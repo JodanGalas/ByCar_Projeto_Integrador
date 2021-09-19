@@ -80,27 +80,6 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 * Divulga carros som seus descritivos e imagens com intuito de venda.
 * Geração de relatórios que auxilia na visualização de demanda de produtos para a tomada de decisões
 
-## Documentação do Projeto
-
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/problemas.png" width="600" />
-  </a>
-	
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/personas.png" width="800" />
-  </a>
-	
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/funcionalidades.png" width="1000" />
-  </a>
-
-	
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/expectativas.png" width="600" />
-  </a>
 
 
 
