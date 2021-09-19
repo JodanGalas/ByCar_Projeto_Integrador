@@ -4,7 +4,7 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/logo_transparent_background.png?raw=true" width="350" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/image.png?raw=true" width="350" />
   </a>
 </p>
 <h1 align="center">
