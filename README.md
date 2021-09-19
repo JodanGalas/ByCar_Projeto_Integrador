@@ -140,7 +140,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 													   
 ## Tecnologias
-<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/Tecnologias.png" width="900" height="500"/>
+<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/Tecnologias.png" width="800" height="600"/>
 
 ## Links de entregas
 | Data | Links |
