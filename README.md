@@ -93,7 +93,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 </p>
 <h3 align="center">
-  Solicitação de acesso
+  Login
 </h3>
 
 <p align="center">
@@ -104,7 +104,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 	
 </p>
 <h3 align="center">
-  Recuperação de Senha
+  Redefinição de senha
 </h3>
   
   <p align="center">
@@ -115,7 +115,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
   
   </p>
 <h3 align="center">
- Anunciar carros via App
+ Importação de arquivos
 </h3>
    <p align="center">
   <kbd>
