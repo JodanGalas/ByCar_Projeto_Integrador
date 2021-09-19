@@ -131,11 +131,11 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 ## Product Backlog 
 
-O layout do Backlog/ TeamProject o está disponível no Figma:
-
-<a href="https://www.figma.com/file/5ewZ7MTdCldrPBeReyCsT8/ByCar?node-id=0%3A1">
-	<img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
-</a>
+<p align="center">
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/BackLog_Bycar.jpeg" width="230" />
+  </a>
+</p>
 
 
 													   
