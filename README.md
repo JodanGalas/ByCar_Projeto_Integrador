@@ -140,7 +140,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 													   
 ## Tecnologias
-<img src="http://www.idebrasil.com.br/blog/wp-content/uploads/2019/12/blog-por-que-o-trabalho-em-equipe-nas-empresas-e-importante.jpg" width="900" height="600"/>
+<img src="http://www.idebrasil.com.br/blog/wp-content/uploads/2019/12/blog-por-que-o-trabalho-em-equipe-nas-empresas-e-importante.jpg" width="900" height="1000"/>
 
 ## Links de entregas
 | Data | Links |
