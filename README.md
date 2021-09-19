@@ -34,20 +34,23 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 
 O layout da aplicação está disponível no Figma:
 
-<a href="https://www.figma.com/proto/jOmIWRVDItaf7kSwE8pHy9/Prototipagem?node-id=2%3A4&viewport=309%2C303%2C0.1183125376701355&scaling=min-zoom&page-id=0%3A1">
+<a href="https://www.figma.com/file/HyCujE1NQoMmD53FXMEUM4/ByCar?node-id=0%3A1">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
+	
+	
 
 ## Dev team
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/fernandamarques-hub"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56441190?v=4" width="100px;" alt=""/><br /><sub><b>Fernanda Marques</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
-    <td align="center"><a href="https://github.com/marciosousa4"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54045555?s=400&u=66b3d79c9e9e434fb934f562ac107c87df2c73f5&v=4" width="100px;" alt=""/><br /><sub><b>Marcio Sousa</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
+       <td align="center"><a href="https://github.com/marciosousa4"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54045555?s=400&u=66b3d79c9e9e434fb934f562ac107c87df2c73f5&v=4" width="100px;" alt=""/><br /><sub><b>Marcio Sousa</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
     <td align="center"><a href="https://github.com/fcursino"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51213785?v=4" width="100px;" alt=""/><br /><sub><b>Fabrício Cursino</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-    <td align="center"><a href="https://github.com/DaviNeves0"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54684941?v=4" width="100px;" alt=""/><br /><sub><b>Davi Neves</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-    <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
+        <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
+	   <td align="center"><a href="https://github.com/robertaAb><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/27467246?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Roberta</b></sub></a>
+	  <td align="center"><a href="https://github.com/IsraelAugusto0110<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56437566?v=4" width="100px;" alt=""/><br /><sub><b>Israel</b></sub></a>
+	  
   </tr>
 </table>
 
@@ -55,15 +58,15 @@ O layout da aplicação está disponível no Figma:
 * [O que é a Mítim](#o-que-é-a-mítim)
 * [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
 * [Benefícios](#benefícios)
-* [Documentação do Projeto](https://github.com/marciosousa4/Mitim_Atas_Reuniao/blob/Sprint-2/Documento%20de%20Requisitos%20-%20Mitim.pdf)
+* [Documentação do Projeto]()
 * [Product Backlog](#product-backlog)
 * [Tecnologias](#tecnologias)
 * [Links de Entregas](#links-de-entregas)
 * [Features](#features)
-* [Funcionamento do sistema](https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.2.0.0)
-* [Testes do software](https://github.com/marciosousa4/Mitim_Atas_Reuniao/blob/main/Sprint%203/TESTES%20FUNCIONAIS%20-%20M%C3%8DTIM%20v.1.0.0.pdf)
+* [Funcionamento do sistema]()
+* [Testes do software]()
 
-## O que é a Mítim 
+## O que é ByCAr
 Mítim é uma ferramenta que permite cadastro das atas de reunião e de seus respectivos participantes, gerando um registro online de todas as decisões tomadas , permitindo a delegação das ações discutidas na reunião para os seus respectivo responsáveis.
 ## Ferramenta Desenvolvida 
 Essa ferramenta será configurada para Gerenciar Atas de Reunião visando as funcionalidades de cadastro, controle de acesso, logs de execução, geração e monitoramento de ata de reunião e assinatura digital. Também é possível gerar relatórios que forneçam dados para insights estratégicos e tomada de decisões.
@@ -76,9 +79,10 @@ Essa ferramenta será configurada para Gerenciar Atas de Reunião visando as fun
 
 
 <p align="center">
-  <a href="https://github.com/marciosousa4/Mitim_Atas_Reuniao">
-    <img alt="Mìtim" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/logo_transparent_background.png?raw=true" width="200" />
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/image.png" width="350" />
   </a>
+</p>
 
 </p>
 <h3 align="center">
@@ -92,7 +96,7 @@ Essa ferramenta será configurada para Gerenciar Atas de Reunião visando as fun
 
 <p align="center">
   <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/GifM%C3%ADtim(Solicita%C3%A7%C3%A3o%20e%20Aprova%C3%A7%C3%A3o%20de%20Acesso).gif" alt="Intro">
+    <img width="650" style="border-radius: 5px" height="370" src="gif" alt="Intro">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
 	
@@ -103,46 +107,57 @@ Essa ferramenta será configurada para Gerenciar Atas de Reunião visando as fun
   
   <p align="center">
   <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/GifM%C3%ADtim(Redefini%C3%A7%C3%A3o%20de%20Senha).gif?raw=true" alt="Intro">
+    <img width="650" style="border-radius: 5px" height="370" src="gif?raw=true" alt="Intro">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   
   </p>
 <h3 align="center">
-  Manipulação de Atas
+ Anunciar carros via App
 </h3>
    <p align="center">
   <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/GifM%C3%ADtim(ATA%20de%20Reuni%C3%A3o).gif?raw=true" alt="Intro">
+    <img width="650" style="border-radius: 5px" height="370" src="gif?raw=true" alt="Intro">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   
 </p>
-
+<p align="center">
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/image.png" width="350" />
+  </a>
+</p>
 
 ## Product Backlog 
-<img src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/Product%20Backlog.png" width="900" height="600"/>
 
+O layout do Backlog/ TeamProject o está disponível no Figma:
+
+<a href="https://www.figma.com/file/5ewZ7MTdCldrPBeReyCsT8/ByCar?node-id=0%3A1">
+	<img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
+
+
+													   
 ## Tecnologias
-<img src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/Tecnologias.png" width="900" height="600"/>
+<img src="http://www.idebrasil.com.br/blog/wp-content/uploads/2019/12/blog-por-que-o-trabalho-em-equipe-nas-empresas-e-importante.jpg" width="900" height="600"/>
 
 ## Links de entregas
 | Data | Links |
 | ------ | ------ |
-|    28/03/2021   |[Sprint 1](https://github.com/marciosousa4/Mitim_Atas_Reuniao/tree/Sprint-1)|
-|    18/04/2021   |[Sprint 2](https://github.com/marciosousa4/Mitim_Atas_Reuniao/tree/Sprint-2)|
-|    16/05/2021   |[Sprint 3](https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.2.0.0)
-|    05/06/2021   |[Sprint 4](https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.3.0.0)
+|    19/09/2021   |[Sprint 1]()|
+|    10/10/2021   |[Sprint 2]()|
+|    07/11/2021   |[Sprint 3]()
+|    28/11/2021   |[Sprint 4]()
 
 
 ### Features
 
-:white_check_mark: Login de usuário
+:white_check_mark: Login de usuário/Adm
 
 :white_check_mark: Cadastro de usuário
 
-:white_check_mark: Cadastro de  atas
+:white_check_mark: Anúncio de Carros
 
-:white_check_mark: Impressão de atas
+:white_check_mark: chat 
 
 :white_check_mark: Relatórios
