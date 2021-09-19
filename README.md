@@ -45,7 +45,8 @@ O layout da aplicação está disponível no Figma:
 
 <table>
   <tr>
-       <td align="center"><a href="https://github.com/marciosousa4"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54045555?s=400&u=66b3d79c9e9e434fb934f562ac107c87df2c73f5&v=4" width="100px;" alt=""/><br /><sub><b>Marcio Sousa</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
+       <td align="center"><a href="https://github.com/Pedro-Landin"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69650012?v=4" width="100px;" alt=""/><br /><sub><b>Pedro Landim</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
+	   <td align="center"><a href="https://github.com/marciosousa4"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54045555?s=400&u=66b3d79c9e9e434fb934f562ac107c87df2c73f5&v=4" width="100px;" alt=""/><br /><sub><b>Marcio Sousa</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
     <td align="center"><a href="https://github.com/fcursino"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51213785?v=4" width="100px;" alt=""/><br /><sub><b>Fabrício Cursino</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
         <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
 	   <td align="center"><a href="https://github.com/robertaAb><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/27467246?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Roberta</b></sub></a>
