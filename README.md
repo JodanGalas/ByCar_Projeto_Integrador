@@ -4,11 +4,11 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/marciosousa4/Repositorio_de_Imagens/blob/main/image.png?raw=true" width="350" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/image.png" width="350" />
   </a>
 </p>
 <h1 align="center">
-  Mítim Atas de Reunião
+ ByCAr_Projeto_Integrador Atas de Reunião
 </h1>
 <p align="center">
   ⚛️ 📄 🚀
@@ -19,11 +19,10 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
   </strong>
 </p>
 <p align="center">
-  Mítim é um Software para gestão de ata de reuniões que gerencia pautas, prazos e emite relatórios para que sua equipe possa ter controle das reuniões e trazer mais resultados para a sua empresa 
+  ByCAr_Projeto_Integrador é um projeto de um App utilizando as tecnologias Expo, React Native e Node Js. Visando a compra e venda de carros seguindo cadastros prévios ou de importação de dados em csv.
 </p>
 <p align="center">
-  <a href="https://github.com/marciosousa4/Mitim_Atas_Reuniao/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby is released under the MIT license." />
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
   </a>
   <a href="https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.1.0.0">
     <img src="https://img.shields.io/github/v/tag/iterative/setup-cml?label=GitHub%20Actions&logo=GitHub" alt="https://github.com/marciosousa4/Mitim_Atas_Reuniao/releases/tag/v.1.0.0" />
