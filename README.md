@@ -34,7 +34,7 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 
 O layout da aplicação está disponível no Figma:
 
-<a href="https://www.figma.com/file/HyCujE1NQoMmD53FXMEUM4/ByCar?node-id=0%3A1">
+<a href="https://www.figma.com/proto/HyCujE1NQoMmD53FXMEUM4/ByCar?node-id=110%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=110%3A3&show-proto-sidebar=1">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
