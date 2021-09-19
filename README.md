@@ -55,7 +55,7 @@ O layout da aplicação está disponível no Figma:
 </table>
 
 ## Índice
-* [O que é a Mítim](#o-que-é-a-mítim)
+* [O que é a ByCar(#o-que-é-a-ByCar)
 * [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
 * [Benefícios](#benefícios)
 * [Documentação do Projeto]()
@@ -67,15 +67,41 @@ O layout da aplicação está disponível no Figma:
 * [Testes do software]()
 
 ## O que é ByCAr
-Mítim é uma ferramenta que permite cadastro das atas de reunião e de seus respectivos participantes, gerando um registro online de todas as decisões tomadas , permitindo a delegação das ações discutidas na reunião para os seus respectivo responsáveis.
+ByCar é uma App que permite o cadastro de usuários e anúncios de carros, gerando relatório e interação com os compradores via chat.
+
 ## Ferramenta Desenvolvida 
-Essa ferramenta será configurada para Gerenciar Atas de Reunião visando as funcionalidades de cadastro, controle de acesso, logs de execução, geração e monitoramento de ata de reunião e assinatura digital. Também é possível gerar relatórios que forneçam dados para insights estratégicos e tomada de decisões.
+Essa ferramenta será configurada para Gerenciar anúncios de Carros visando funcionalidade de cadastro usuário e anúncios, importação de .csv, geração de relatórios, chat com os envolvidos comprador/vendedor. Relatórios e Graficos visam a informação de visualizações de anúncios e tomada de decisão sobre o que é ou não favorável anunciar.
+
 ## Benefícios
-* Gera ata de reunião
-* Garante mais produtividade e eficiência em suas reuniões
-* Permite o monitoramento e acompanhamento do andamento das ações definidas nas Reuniões
-* Divulga para todos os participantes e/ou interessados os itens e assuntos discutidos e abordados nas Reuniões.
-* Geração de relatórios que me  fornecem dados para insights estratégicos e tomada de decisões
+* Gera anúncios
+* Chat sobre anúncios 
+* Permite o monitoramento e acompanhamento dos anúncios pelo usuário e Adm
+* Divulga carros som seus descritivos e imagens com intuito de venda.
+* Geração de relatórios que auxilia na visualização de demanda de produtos para a tomada de decisões
+
+##Documentação do Projeto
+
+<p align="center">
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/problemas.png" width="600" />
+  </a>
+	
+<p align="center">
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/personas.png" width="800" />
+  </a>
+	
+<p align="center">
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/funcionalidades.png" width="1000" />
+  </a>
+
+	
+  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/expectativas.png" width="600" />
+  </a>
+
+
 
 
 <p align="center">
