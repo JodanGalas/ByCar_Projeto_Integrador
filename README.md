@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
- ByCAr_Projeto_Integrador Atas de Reunião
+ ByCAr Projeto Integrador 
 </h1>
 <p align="center">
   ⚛️ 📄 🚀
