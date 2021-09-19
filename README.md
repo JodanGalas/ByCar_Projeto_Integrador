@@ -4,7 +4,7 @@ Repositório destinado ao 5º projeto integrador do curso de ADS da faculdade de
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/image.png" width="350" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="350" />
   </a>
 </p>
 <h1 align="center">
@@ -83,7 +83,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/image.png" width="230" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="230" />
   </a>
 </p>
 
