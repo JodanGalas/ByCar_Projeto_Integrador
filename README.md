@@ -133,14 +133,14 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/BackLog_Bycar.jpeg" width="1200" height="500" />
+    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/BackLog_Bycar.jpeg" width="1200" height="500" />
   </a>
 </p>
 
 
 													   
 ## Tecnologias
-<img src="http://www.idebrasil.com.br/blog/wp-content/uploads/2019/12/blog-por-que-o-trabalho-em-equipe-nas-empresas-e-importante.jpg" width="900" height="1000"/>
+<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/Tecnologias.png" width="900" height="1000"/>
 
 ## Links de entregas
 | Data | Links |
