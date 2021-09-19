@@ -55,10 +55,10 @@ O layout da aplicação está disponível no Figma:
 </table>
 
 ## Índice
-* [O que é a ByCar(#o-que-é-a-ByCar)
+* [O que é a ByCar](#o-que-é-a-ByCar)
 * [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
 * [Benefícios](#benefícios)
-* [Documentação do Projeto]()
+* [Documentação do Projeto](#Documentação-do-Projeto)
 * [Product Backlog](#product-backlog)
 * [Tecnologias](#tecnologias)
 * [Links de Entregas](#links-de-entregas)
@@ -79,7 +79,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 * Divulga carros som seus descritivos e imagens com intuito de venda.
 * Geração de relatórios que auxilia na visualização de demanda de produtos para a tomada de decisões
 
-##Documentação do Projeto
+## Documentação do Projeto
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
