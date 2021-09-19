@@ -63,7 +63,7 @@ O layout da aplicação está disponível no Figma:
 
 
 ## O que é ByCAr
-ByCar é um App de anuncios e venda de carros, onde o vendedor pode se comunicar com comprador em tempo real, podendo monitorar, pausar e despausar o anúncio.  
+ByCar é um App em que uma pessoa fisica ou juridica pode se cadastrar para fazer divulgação de anúncios de venda de carros, podendo se comunicar em tempo real com o comprador.
 
 ## Ferramenta Desenvolvida 
 Essa ferramenta será configurada para Gerenciar anúncios de Carros visando funcionalidade de cadastro de usuárioa e anúncios pela importação de arquivo .csv, geração de relatórios, comunicação entre comprador/vendedor em tempo. 
