@@ -78,7 +78,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="230" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="350" />
   </a>
 </p>
 
