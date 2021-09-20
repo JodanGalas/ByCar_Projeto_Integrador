@@ -37,7 +37,4 @@ Através do link abaixo é possível a visualização do protótipo referente à
 	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint_1/Sprint%201/Burndown.jpeg"  />
 </h1>
 
-<h1 align="center">
-	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint_1/Sprint%201/Demonstra%C3%A7%C3%A3o.gif"  />
-</h1>
 
