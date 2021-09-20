@@ -4,126 +4,28 @@
     <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="350" />
   </a>
 </p>
-<h1 align="center">
- ByCAr Projeto Integrador 
-</h1>
-<p align="center">
-  ⚛️ 📄 🚀
-</p>
-<p align="center">
-  <strong>
-    Soluções inteligentes 
-  </strong>
-</p>
-<p align="center">
-  ByCAr é um projeto de um Aplicativo Mobile, onde o foco é um portal de anuncios e venda de carro.
-</p>
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
-  </a>
-
-  
 
 
-## 🎨 Layout
+## Funcionalidades da Aplicação
+* Atendendo a lista de requisitos desenvolvemos um protótipo com as funcionalidades especificadas pela empresa parceira.
+* A interface com o usuário é de vital importância para o sucesso do sistema. Principalmente por ser um sistema que será utilizado diariamente, o usuário não possui tempo disponível para aprender como utilizar o sistema. O sistema terá uma interface amigável ao usuário primário sem se tornar cansativa aos usuários mais experientes conforme podemos ver no protótipo anexo a essa entrega.
 
-O layout da aplicação está disponível no Figma:
+## Valor da Sprint 
+* Comunicação entre comprador/vendedor
+* Importação de arquivos de Usuario/Vendedor
+
+## Sobre o Projeto
+Para o desenvolvimento do protótipo da Aplicação foi utilizado o editor de imagens vetoriais e ferramenta de prototipagem Figma, onde foram modeladas as futuras telas da aplicação e suas respectivas conexões.
+
+Através do link abaixo é possível a visualização do protótipo referente à primeira entrega Por ele é possível navegar pelas telas, entendendo o fluxo e função dos botões e menus.
 
 <a href="https://www.figma.com/proto/HyCujE1NQoMmD53FXMEUM4/ByCar?node-id=110%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=110%3A3&show-proto-sidebar=1">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
-	
-	
+## Demonstração 
 
-## Dev team
-
-<table>
-  <tr>
-       <td align="center"><a href="https://github.com/Pedro-Landin"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/69650012?v=4" width="100px;" alt=""/><br /><sub><b>Pedro Landim</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
-	   <td align="center"><a href="https://github.com/marciosousa4"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54045555?s=400&u=66b3d79c9e9e434fb934f562ac107c87df2c73f5&v=4" width="100px;" alt=""/><br /><sub><b>Marcio Sousa</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">👨‍🚀</a></td>
-    <td align="center"><a href="https://github.com/fcursino"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51213785?v=4" width="100px;" alt=""/><br /><sub><b>Fabrício Cursino</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-        <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-	  <td align="center"><a href="https://github.com/roodrigofelix"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56441308?v=4" width="100px;" alt=""/><br /><sub><b>Rodrigo Felix</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-	    <td align="center"><a href="https://github.com/joaosoeiro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54710426?v=4" width="100px;" alt=""/><br /><sub><b>João Soeiro</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-	   <td align="center"><a href="https://github.com/robertaAb><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/27467246?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Roberta</b></sub></a>
-	  <td align="center"><a href="https://github.com/IsraelAugusto0110<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56437566?v=4" width="100px;" alt=""/><br /><sub><b>Israel</b></sub></a>
-	  
-  </tr>
-</table>
-
-## Índice
-* [O que é a ByCar](#o-que-é-a-ByCar)
-* [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
-* [Benefícios](#benefícios)
-* [Product Backlog](#product-backlog)
-* [Tecnologias](#tecnologias)
-* [Links de Entregas](#links-de-entregas)
-* [Features](#features)
-
-
-## O que é ByCAr
-ByCar é um App em que uma pessoa fisica ou juridica pode se cadastrar para fazer divulgação de anúncios de venda de carros, podendo se comunicar em tempo real com o comprador.
-
-## Ferramenta Desenvolvida 
-Essa ferramenta será configurada para Gerenciar anúncios de Carros visando funcionalidade de cadastro de usuárioa e anúncios pela importação de arquivo .csv, geração de relatórios, comunicação entre comprador/vendedor em tempo. 
-
-## Benefícios
-* Importação de arquivos
-* Chat em tempo real
-* Monitoramento de anúncio
-* Segurança LGPD
-* Gerador de relatorio
-
-
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="230" />
-  </a>
-</p>
-
-
-
-
-</p>
-<h3 align="center">
-  Demonstração
-</h3>
 <h1 align="center">
 	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint-1/Demonstra%C3%A7%C3%A3o.gif"  />
 </h1>
 
-
-## Product Backlog 
-
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/BackLog_Bycar.jpeg" width="1200" height="500" />
-  </a>
-</p>
-
-
-													   
-## Tecnologias
-<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/Tecnologias.png" width="800" height="600"/>
-
-## Links de entregas
-| Data | Links |
-| ------ | ------ |
-|    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/tree/Sprint-1)|
-|    10/10/2021   |[Sprint 2]()|
-|    07/11/2021   |[Sprint 3]()
-|    28/11/2021   |[Sprint 4]()
-
-
-### Features
-
-:white_check_mark: Login de usuário/Adm
-
-:white_check_mark: Cadastro de usuário
-
-:white_check_mark: Anúncio de Carros
-
-:white_check_mark: chat 
-
-:white_check_mark: Relatórios
