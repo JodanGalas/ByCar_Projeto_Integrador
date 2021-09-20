@@ -90,7 +90,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
   Demonstração
 </h3>
 <h1 align="center">
-	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint-1/Demonstra%C3%A7%C3%A3o.gif"  />
+	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint_1/Sprint%201/Demonstra%C3%A7%C3%A3o.gif"  />
 </h1>
 
 
