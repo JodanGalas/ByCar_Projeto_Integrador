@@ -120,7 +120,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 :white_check_mark: Login de Administrador
 
-:white_check_mark: Cadastro por importação de .cvs
+:white_check_mark: Cadastro por importação de .csv
 
 :white_check_mark: Anúncio de Carros
 
