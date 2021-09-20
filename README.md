@@ -89,39 +89,9 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 <h3 align="center">
   Demonstração
 </h3>
-
-</p>
-<h3 align="center">
-  Login
-</h3>
-
-<p align="center">
-  <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="gif" alt="Intro">
-  </kbd>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-	
-</p>
-<h3 align="center">
-  Redefinição de senha
-</h3>
-  
-  <p align="center">
-  <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="gif?raw=true" alt="Intro">
-  </kbd>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  
-  </p>
-<h3 align="center">
- Importação de arquivos
-</h3>
-   <p align="center">
-  <kbd>
-    <img width="650" style="border-radius: 5px" height="370" src="gif?raw=true" alt="Intro">
-  </kbd>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  
+<h1 align="center">
+	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint-1/Demonstra%C3%A7%C3%A3o.gif"  />
+</h1>
 
 
 ## Product Backlog 
