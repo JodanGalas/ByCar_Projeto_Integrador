@@ -73,7 +73,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 * Chat em tempo real
 * Monitoramento de anúncio
 * Segurança LGPD
-* Gerador de relatorio
+* Gerador de relatorios
 
 
 <p align="center">
