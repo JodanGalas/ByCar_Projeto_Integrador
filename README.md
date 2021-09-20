@@ -118,12 +118,12 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 
 ### Features
 
-:white_check_mark: Login de usuário/Adm
+:white_check_mark: Login de Administrador
 
-:white_check_mark: Cadastro de usuário
+:white_check_mark: Cadastro por importação de .cvs
 
 :white_check_mark: Anúncio de Carros
 
-:white_check_mark: chat 
+:white_check_mark: Comunicação em tempo real
 
 :white_check_mark: Relatórios
