@@ -110,7 +110,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 ## Links de entregas
 | Data | Links |
 | ------ | ------ |
-|    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/tree/Sprint-1)|
+|    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/tree/Sprint_1/Sprint%201)|
 |    10/10/2021   |[Sprint 2]()|
 |    07/11/2021   |[Sprint 3]()
 |    28/11/2021   |[Sprint 4]()
