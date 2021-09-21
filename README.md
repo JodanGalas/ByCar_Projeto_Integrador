@@ -16,7 +16,7 @@
   </strong>
 </p>
 <p align="center">
-  ByCAr é um projeto de um Aplicativo Mobile, onde o foco é um portal de anuncios e venda de carro.
+  ByCAr é um projeto de um sistema Web e Mobile, onde o foco é um portal de anuncios e venda de carro.
 </p>
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
