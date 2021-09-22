@@ -101,18 +101,12 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 </h1>
 
 
-## Product Backlog 
-
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="BackLog" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/BackLog_Bycar.jpeg" width="1000" height="500" />
-  </a>
-</p>
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/5.png?raw=true" width="800" height="600"/>
 
 
 													   
 ## Tecnologias
-<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/Tecnologias.png" width="800" height="600"/>
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/6.png?raw=true" width="800" height="600"/>
 
 ## Links de entregas
 | Data | Links |
