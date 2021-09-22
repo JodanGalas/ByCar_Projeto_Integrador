@@ -72,7 +72,7 @@ O documento de desenvolvimento da aplicação está disponível no Figma:
 ByCar é uma ferramenta em que uma pessoa fisica ou juridica pode se cadastrar para fazer divulgação de anúncios de venda de carros, podendo se comunicar em tempo real com o comprador.
 
 ## Ferramenta Desenvolvida 
-Essa ferramenta será configurada para Gerenciar anúncios de Carros visando funcionalidade de cadastro de usuárioa e anúncios pela importação de arquivo .csv, geração de relatórios, comunicação entre comprador/vendedor em tempo. 
+Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a funcionalidade de cadastro de usuários e anúncios através da importação de arquivo .csv, podendo emitir relatórios e ainda, comunicação entre comprador/vendedor em tempo real dentro do sistema.
 
 ## Benefícios
 * importação de arquivos podendo ser integrado a outros portais de vendas
