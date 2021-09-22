@@ -16,21 +16,27 @@
   </strong>
 </p>
 <p align="center">
-  ByCAr é um projeto de um sistema Web e Mobile, onde o foco é um portal de anuncios e venda de carro.
+  ByCAr é o seu sistema Web e Mobile para anuncios e venda de carro.
 </p>
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/LICENSE"
-  </a>
+ 
 
   
-
-
 ## 🎨 Layout
+	
 
 O layout da aplicação está disponível no Figma:
 
 <a href="https://www.figma.com/proto/HyCujE1NQoMmD53FXMEUM4/ByCar?node-id=110%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=110%3A3&show-proto-sidebar=1">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
+	
+
+## 🎨 Estratégia Agile de desenvolvimento 
+
+O documento de desenvolvimento da aplicação está disponível no Figma:
+
+<a href="https://www.figma.com/file/5ewZ7MTdCldrPBeReyCsT8/ByCar">
+  <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20metodologia%20-Figma-%2304D361">
 </a>
 
 	
@@ -53,27 +59,28 @@ O layout da aplicação está disponível no Figma:
 </table>
 
 ## Índice
-* [O que é a ByCar](#o-que-é-a-ByCar)
+* [O que é a ByCar](#o-que-é-a-bycar)
 * [Ferramenta Desenvolvida](#ferramenta-desenvolvida)
 * [Benefícios](#benefícios)
-* [Product Backlog](#product-backlog)
+* [Product Backlog](https://github.com/JodanGalas/ByCar_Projeto_Integrador/projects/1)
 * [Tecnologias](#tecnologias)
 * [Links de Entregas](#links-de-entregas)
 * [Features](#features)
 
 
-## O que é ByCAr
+## O que é a ByCAr
 ByCar é uma ferramenta em que uma pessoa fisica ou juridica pode se cadastrar para fazer divulgação de anúncios de venda de carros, podendo se comunicar em tempo real com o comprador.
 
 ## Ferramenta Desenvolvida 
 Essa ferramenta será configurada para Gerenciar anúncios de Carros visando funcionalidade de cadastro de usuárioa e anúncios pela importação de arquivo .csv, geração de relatórios, comunicação entre comprador/vendedor em tempo. 
 
 ## Benefícios
-* Importação de arquivos
-* Chat em tempo real
-* Monitoramento de anúncio
-* Segurança LGPD
-* Gerador de relatorios
+* importação de arquivos podendo ser integrado a outros portais de vendas
+* Comunicação em tempo real
+* Administração do anúncio 
+* Segurança de seus dados de acordo com a LGPD 
+* Ralatórios estatísticos para insights de negócios
+* Alta disponibilidade 
 
 
 <p align="center">
@@ -111,9 +118,9 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando fun
 | Data | Links |
 | ------ | ------ |
 |    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/tree/Sprint_1)|
-|    10/10/2021   |[Sprint 2]()|
-|    07/11/2021   |[Sprint 3]()
-|    28/11/2021   |[Sprint 4]()
+|    10/10/2021   |[Sprint 2]
+|    07/11/2021   |[Sprint 3]
+|    28/11/2021   |[Sprint 4]
 
 
 ### Features
