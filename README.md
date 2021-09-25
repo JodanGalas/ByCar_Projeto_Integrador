@@ -31,7 +31,7 @@ O layout da aplicação está disponível no Figma:
 </a>
 	
 
-## 🎨 Estratégia Agile de desenvolvimento 
+## 🎨 Estratégia Ágil de desenvolvimento 
 
 O documento de desenvolvimento da aplicação está disponível no Figma:
 
@@ -68,7 +68,7 @@ O documento de desenvolvimento da aplicação está disponível no Figma:
 * [Features](#features)
 
 
-## O que é a ByCAr
+## O que é a ByCar
 ByCar é uma ferramenta em que uma pessoa fisica ou juridica pode se cadastrar para fazer divulgação de anúncios de venda de carros, podendo se comunicar em tempo real com o comprador.
 
 ## Ferramenta Desenvolvida 
