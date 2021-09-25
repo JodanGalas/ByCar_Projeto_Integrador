@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
- ByCAr Projeto Integrador 
+ ByCar Projeto Integrador 
 </h1>
 <p align="center">
   ⚛️ 📄 🚀
@@ -16,7 +16,7 @@
   </strong>
 </p>
 <p align="center">
-  ByCAr é o seu sistema Web e Mobile para anuncios e venda de carro.
+  ByCar é o seu sistema Web e Mobile para anuncios e venda de carro.
 </p>
  
 
