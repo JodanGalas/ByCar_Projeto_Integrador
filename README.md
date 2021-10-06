@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="350" />
+    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/image.png?raw=true" width="350" />
   </a>
 </p>
 <h1 align="center">
