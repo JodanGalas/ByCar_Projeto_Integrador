@@ -52,8 +52,7 @@ O documento de desenvolvimento da aplicação está disponível no Figma:
         <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
 	  <td align="center"><a href="https://github.com/roodrigofelix"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56441308?v=4" width="100px;" alt=""/><br /><sub><b>Rodrigo Felix</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
 	    <td align="center"><a href="https://github.com/joaosoeiro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54710426?v=4" width="100px;" alt=""/><br /><sub><b>João Soeiro</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-	   <td align="center"><a href="https://github.com/robertaAb><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/27467246?s=60&v=4" width="100px;" alt=""/><br /><sub><b>Roberta</b></sub></a>
-	  <td align="center"><a href="https://github.com/IsraelAugusto0110<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56437566?v=4" width="100px;" alt=""/><br /><sub><b>Israel</b></sub></a>
+	 	  <td align="center"><a href="https://github.com/IsraelAugusto0110<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56437566?v=4" width="100px;" alt=""/><br /><sub><b>Israel</b></sub></a>
 	  
   </tr>
 </table>
@@ -83,30 +82,17 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 * Alta disponibilidade 
 
 
-<p align="center">
-  <a href="https://github.com/JodanGalas/ByCar_Projeto_Integrador">
-    <img alt="ByCAr_Projeto_Integrador" src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/image.png" width="350" />
-  </a>
-</p>
-
-
-
-
 </p>
 <h3 align="center">
-  Demonstração
-</h3>
-<h1 align="center">
-	<img src="https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/Sprint_1/Sprint%201/Demonstra%C3%A7%C3%A3o.gif"  />
-</h1>
+ 
 
 
-<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/5.png?raw=true" width="800" height="600"/>
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/5.png?raw=true" width="800" height="570"/>
 
 
 													   
 ## Tecnologias
-<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/images/6.png?raw=true" width="800" height="600"/>
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/6.png?raw=true" width="800" height="600"/>
 
 ## Links de entregas
 | Data | Links |
@@ -119,12 +105,12 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 
 ### Features
 
-:white_check_mark: Login de Administrador
+:white_check_mark: Login de Administrador e usuários
 
 :white_check_mark: Cadastro por importação de .csv
 
-:white_check_mark: Anúncio de Carros
+🔲 Anúncio de Carros
 
-:white_check_mark: Comunicação em tempo real
+🔲 Comunicação em tempo real
 
-:white_check_mark: Relatórios
+🔲 Relatórios
