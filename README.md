@@ -80,14 +80,15 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 * Ralatórios estatísticos para insights de negócios
 * Alta disponibilidade 
 
+## Planejamento 
 
-</p>
-<h3 align="center">
- 
+			  
 
 
-<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/5.png?raw=true" width="800" height="570"/>
+			  
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/Planejamento.png?raw=true" width="900" height="600"/>
 
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/Backlog%20sprint%202.png?raw=true" width="1200" height="600"/>" width="900" height="600"/>
 
 													   
 ## Tecnologias
@@ -97,7 +98,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 | Data | Links |
 | ------ | ------ |
 |    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/releases/tag/V1.0)|
-|    10/10/2021   |[Sprint 2]
+|    10/10/2021   |[Sprint 2](https://github.com/JodanGalas/ByCar_Projeto_Integrador/releases/tag/V2.0)
 |    07/11/2021   |[Sprint 3]
 |    28/11/2021   |[Sprint 4]
 
@@ -108,7 +109,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 
 :white_check_mark: Cadastro por importação de .csv
 
-🔲 Anúncio de Carros
+:white_check_mark: Anúncio de Carros
 
 🔲 Comunicação em tempo real
 
