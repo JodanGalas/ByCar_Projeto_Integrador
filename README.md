@@ -88,7 +88,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 			  
 <img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/Planejamento.png?raw=true" width="900" height="600"/>
 
-<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/Backlog%20sprint%202.png?raw=true" width="1200" height="600"/>" width="900" height="600"/>
+<img src= "https://github.com/JodanGalas/ByCar_Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o%20e%20Imagens/Backlog%20sprint%202.png?raw=true" width="900" height="600"/>" width="900" height="600"/>
 
 													   
 ## Tecnologias
