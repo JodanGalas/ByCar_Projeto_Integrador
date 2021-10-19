@@ -5,13 +5,14 @@ const cors = require('cors');
 const Routes = express.Router();
 const PORT = 4000;
 
-let db = {
+let db = { 
     id: 1,
-    name: 'fabricio',
-    email: 'fabricio@gmail.com',
+    name: 'Marcio',
+    email: 'marcio@gmail.com',
+    cpf: '48960847801',
     password: '123',
     first_access: 0,
-    code: ''
+    code: '' 
 }
 
 let code = '555000';
@@ -79,3 +80,4 @@ app.use('/bycar', Routes);
 app.listen(PORT, function () {
     console.log('server rodando na porta: ' + PORT);
 });
+

@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
-import RootStack from './src/services/navigation';
-import AppLoading from 'expo-app-loading';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { CredentialsContext } from './src/context/credentials';
+import React, { useState } from "react";
+import RootStack from "./src/services/navigation";
+import AppLoading from "expo-app-loading";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { CredentialsContext } from "./src/context/credentials";
 
-
-export default function App() {
+export default () => {
   const [appReady, setAppReady] = useState(false);
-  const [storedCredentials, setStoredCredentials] = useState('');
+  const [storedCredentials, setStoredCredentials] = useState("");
 
   const checkLoginCredentials = () => {
-    AsyncStorage
-      .getItem('bycarCredentials')
+    AsyncStorage.getItem("bycarCredentials")
       .then((result) => {
         if (result !== null) {
-          setStoredCredentials(JSON.parse(result))
-        }
-        else {
+          setStoredCredentials(JSON.parse(result));
+        } else {
           setStoredCredentials(null);
         }
       })
-      .catch(error => console.log(error))
-  }
+      .catch((error) => console.log(error));
+  };
 
   if (!appReady) {
     return (
@@ -30,13 +27,13 @@ export default function App() {
         onFinish={() => setAppReady(true)}
         onError={console.warn}
       />
-    )
+    );
   }
   return (
-    <CredentialsContext.Provider value={{storedCredentials,setStoredCredentials}} >
+    <CredentialsContext.Provider
+      value={{ storedCredentials, setStoredCredentials }}
+    >
       <RootStack />
     </CredentialsContext.Provider>
-    
   );
-}
-
+};
