@@ -51,7 +51,6 @@ O documento de desenvolvimento da aplicação está disponível no Figma:
         <td align="center"><a href="https://github.com/JodanGalas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29134051?v=4" width="100px;" alt=""/><br /><sub><b>Jodan Galas</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
 	  <td align="center"><a href="https://github.com/roodrigofelix"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56441308?v=4" width="100px;" alt=""/><br /><sub><b>Rodrigo Felix</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
 	    <td align="center"><a href="https://github.com/joaosoeiro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54710426?v=4" width="100px;" alt=""/><br /><sub><b>João Soeiro</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat">🚀</a></td>
-	 	  <td align="center"><a href="https://github.com/IsraelAugusto0110<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/56437566?v=4" width="100px;" alt=""/><br /><sub><b>Israel</b></sub></a>
 	  
   </tr>
 </table>
