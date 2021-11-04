@@ -38,7 +38,6 @@ class Cadastro:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(FROM, PASSWORD)
-        print("Login funfou")
         server.sendmail(FROM, TO, BODY)
         print("Email enviado para", TO)
         server.quit()
@@ -61,7 +60,6 @@ class Cadastro:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(FROM, PASSWORD)
-        print("Login funfou")
         server.sendmail(FROM, TO, BODY)
         print("Email enviado para", TO)
         server.quit()
@@ -71,8 +69,8 @@ data = 1
         
 @app.route('/create/user', methods=['POST'])
 def create():
-    if 'arq_do_cara' in request.files: 
-        arquivo = request.files['arq_do_cara']     
+    if 'arq' in request.files: 
+        arquivo = request.files['arq']     
         df = pd.read_csv(arquivo)
         data = df.to_dict(orient="records")
         cod = 6
@@ -103,16 +101,39 @@ def create():
 #lista todos os usuarios
 @app.route('/listar/usuarios', methods = ["GET"])
 def users():
-    users = mongo.db.usuarios.find({})
-    resp = dumps(users)
-    return resp
+    users = []
+    for usuario in mongo.db.usuarios.find():
+        users.append({
+            '_id' : str(ObjectId(usuario['_id'])),
+            'nome' : usuario['nome'],
+            'cpf' : usuario['cpf'],
+            'email' : usuario['email'],
+            'telefone' : usuario['telefone'],
+            'endereco' : usuario['endereco'],
+            'id': usuario['id'],
+            'senha' : usuario['senha'],
+            'status' : usuario['status'],
+            'cod' : usuario['cod'],
+            'atividade' : usuario['atividade']})
+        
+    return jsonify(users)
 
 #lista usuario por id
 @app.route('/listar/usuario/<id>', methods = ["GET"])
 def user(id):
-    users = mongo.db.usuarios.find({'id':int(id)})
-    resp = dumps(users)
-    return resp
+    usuario = mongo.db.usuarios.find_one({'id':int(id)})
+    return ({
+            '_id' : str(ObjectId(usuario['_id'])),
+            'nome' : usuario['nome'],
+            'cpf' : usuario['cpf'],
+            'email' : usuario['email'],
+            'telefone' : usuario['telefone'],
+            'endereco' : usuario['endereco'],
+            'id': usuario['id'],
+            'senha' : usuario['senha'],
+            'status' : usuario['status'],
+            'cod' : usuario['cod'],
+            'atividade' : usuario['atividade']})
 
 #atualiza usuario
 @app.route('/atualizar/usuario/<id>', methods=["PUT"])
@@ -172,7 +193,7 @@ def update_senha(id):
     _json = request.json
     _senha = _json['senha']
     mongo.db.usuarios.find_one_and_update(
-        {'id':int(id)}, {"$set":{'senha': _senha}})
+        {'id':int(id)}, {"$set":{'senha': _senha, 'status': 1}})
     resp = jsonify("senha atualizada com sucesso")
     return resp
 
@@ -290,10 +311,8 @@ def updateAnuncios(id):
          'cpf_anunciante': request.json['cpf_anunciante'],
          'valor_veiculo': request.json['valor_veiculo'],
          'id': request.json['id'],
-         'img': request.json['img'],
-        
-        
-     }})
+         'img': request.json['img']}})
      return jsonify({'message': 'Anuncio atualizado'})
+ 
 if __name__ == "__main__":
     app.run()
