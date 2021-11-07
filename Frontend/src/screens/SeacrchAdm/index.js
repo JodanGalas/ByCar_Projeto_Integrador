@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, Dimensions } from "react-native";
 import {
   BasicContainer,
-  Item,
+  ItemUser,
   ItemImage,
   ItemTitle,
   ItemText,
@@ -14,13 +14,15 @@ import {
 import { Button, SubTitle } from "../../components/styles";
 import SearchInput from "../../components/Input/searchInput";
 import { FlatList } from "react-native";
-//import user from "../../data/";
+import user from "../../data/user";
 import Header from "../../components/header";
+
 
 const Home = ({ navigation }) => {
   const [searchText, setSearchText] = useState("");
   const [list, setList] = useState();
   const [todos, setTodos] = useState();
+  const [usu,setUsu] = useState(user);
 
   //Passando para imagem de detalhes do anuncio
   const showDetails = (item) => {
@@ -58,6 +60,7 @@ const Home = ({ navigation }) => {
     getAnuncios();
   }, []);
 
+
   return (
     <HeadContainer>
       <Header />
@@ -73,18 +76,7 @@ const Home = ({ navigation }) => {
           <SubTitle>Resultados...</SubTitle>
 
           <FlatList
-            data={list}
-            renderItem={({ item }) => (
-              <Item onPress={() => showDetails(item)}>
-                <ContainerInfo>
-                  <ItemTitle>{item.fabricante}</ItemTitle>
-                </ContainerInfo>
-                <ItemImage source={item.img} />
-                <ContainerAnuncio>
-                  <ItemText>{item.desc_veiculo}</ItemText>
-                </ContainerAnuncio>
-              </Item>
-            )}
+           
           />
         </ScrollView>
       </BasicContainer>

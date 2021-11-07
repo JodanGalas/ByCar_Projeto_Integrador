@@ -1,53 +1,59 @@
-import React, {useContext} from 'react'
+import React, { useContext } from "react";
 
-import KeyboardAvoidingWrapper from '../../components/KeyboardAvoidingWrapper';
-import { 
-    Container, 
-    InnerContainer, 
-    Logo, 
-    SubTitle, 
-    PageTitle, 
-    Button, 
-    ButtonText } from '../../components/styles';
-import { StatusBar } from 'expo-status-bar';
-import ImgLogo from '../../../assets/Logo.png'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { CredentialsContext } from '../../context/credentials';
+import {
+  Container,
+  InnerContainer,
+  SubTitle,
+  PageTitle,
+  Button,
+  ButtonText,
+} from "../../components/styles";
+import { StatusBar } from "expo-status-bar";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { HeadContainer } from "../../components/style";
+import Header from "../../components/header";
+import { useAuth } from "../../context/auth";
+
 
 
 const Profile = () => {
+ 
 
-    const { storedCredentials, setStoredCredentials } = useContext(CredentialsContext);
-    const { name, email } = storedCredentials;
+  const { user, setUser } = useAuth();
+ 
 
-    const clearLogin = () => {
-        AsyncStorage.removeItem('bycarCredentials')
-            .then(async () => {
-                setStoredCredentials('')
-                const result = await kitty.endSession()
-                console.log(result)
-            })
-            .catch(error => console.log(error))
-    }
+  const clearLogin = () => {
+    AsyncStorage.removeItem("bycarCredentials")
+      .then(async () => {
+        setStoredCredentials("");
+      })
+      .catch((error) => console.log(error));
+  };
 
-    return(
-        <KeyboardAvoidingWrapper>
-            <Container>
-                <StatusBar style='dark' />
-                <InnerContainer>
-                    <PageTitle>Perfil</PageTitle>
-                    <SubTitle>{name}</SubTitle>
-                    <SubTitle>{email}</SubTitle>
-                    <Button
-                        onPress={clearLogin}>
-                        <ButtonText>
-                            SAIR
-                        </ButtonText>
-                    </Button>
-                </InnerContainer>
-            </Container>
-        </KeyboardAvoidingWrapper>
-    )
-}
+
+  async function logout() {
+    await AsyncStorage.removeItem("Async");
+    setUser(null);
+  }
+
+
+  return (
+    <HeadContainer>
+      <Header />
+      <Container>
+        <StatusBar style="dark" />
+        <InnerContainer>
+          <PageTitle>Perfil</PageTitle>
+          <SubTitle>{name}</SubTitle>
+          <SubTitle>{email}</SubTitle>
+          <Button onPress={logout}>
+            <ButtonText>SAIR</ButtonText>
+          </Button>
+        </InnerContainer>
+      </Container>
+    </HeadContainer>
+  );
+};
 
 export default Profile;

@@ -1,143 +1,87 @@
-import React, { useState, useContext } from 'react';
-import { api } from '../../services/api'
+import React, { useState, useContext, useEffect } from "react";
 import {
-    Container,
-    InnerContainer,
-    Logo,
-    SubTitle,
-    FormArea,
-    Button,
-    ButtonText,
-    ExtraView,
-    TextLink,
-    TextLinkContent,
-    MsgBox,
-
-
-} from '../../components/styles';
-import { ActivityIndicator } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import ImgLogo from '../../../assets/Logo.png';
-import { Formik } from 'formik'
-import TextInput from '../../components/Input';
-import KeyboardAvoidingWrapper from '../../components/KeyboardAvoidingWrapper';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { CredentialsContext } from '../../context/credentials';
+  Container,
+  InnerContainer,
+  Logo,
+  SubTitlelogin,
+  FormArea,
+  Button,
+  ButtonText,
+  ExtraView,
+  TextLink,
+  TextLinkContent,
+} from "../../components/styles";
+import { StatusBar } from "expo-status-bar";
+import TextInput from "../../components/Input";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import Header from "../../components/header/headerLogin";
+import { HeadContainer } from "../../components/style";
+import { useAuth } from "../../context/auth";
 
 
 const Login = ({ navigation }) => {
-
-    const [hidePassword, setHidePassword] = useState(true);
-    const [message, setMessage] = useState();
-    const [messageType, setMessageType] = useState();
+  const { user, setUser } = useAuth();
 
 
-    const {storedCredentials, setStoredCredentials} = useContext(CredentialsContext);
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
 
-    const handleLogin = (credentials, setSubmitting) => {
-        handleMessage(null)
-        api
-            .post(`/bycar/login`, credentials)
-            .then((response) => {
-                const { message, status, data } = response;
-                if (data.login === 'FAILED') {
-                    handleMessage('Credenciais Inválidas');
-                }
-                else {
-                    persistLogin(data, message, status);
-                    
-                }
-                setSubmitting(false)
+  const SignIn = async () => {
+    const res = await fetch(`http://127.0.0.1:5000/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        senha: senha,
+      }),
+    });
+    const usuario = await res.json();
+    setUser(usuario[0]);
+    AsyncStorage.setItem("user", usuario[0])
+  };
 
-            })
-            .catch(error => {
-                console.log(error)
-                handleMessage('Ocorreu um erro. Verifique sua internet e tente novamente')
-                setSubmitting(false)
-            })
-    }
+  
+  return (
+    <HeadContainer>
+      <Header />
 
-    const handleMessage = (message, type = 'FAILED') => {
-        setMessage(message);
-        setMessageType(type);
-    }
+      <Container>
+        <StatusBar style="dark" />
+        <InnerContainer>
+          <SubTitlelogin>Login</SubTitlelogin>
 
-    const persistLogin = (credentials, message, status) => {
-        AsyncStorage.setItem('bycarCredentials', JSON.stringify(credentials))
-        .then( () => {
-            handleMessage(message, status);
-            setStoredCredentials(credentials)
-            
-        })
-        .catch((error) => {
-            console.log(error);
-            handleMessage('O login falhou');
-        })
-    }
+          <FormArea>
+            <TextInput
+              label="E-mail"
+              placeholder="Insira seu e-mail"
+              onChangeText={(value) => setEmail(value)}
+            />
+            <TextInput
+              label="Senha"
+              placeholder="Insira sua senha"
+              onChangeText={(value) => setSenha(value)}
+            />
 
+            <Button onPress={SignIn}>
+              <ButtonText>ENTRAR</ButtonText>
+            </Button>
 
-    return (
-        <KeyboardAvoidingWrapper>
-            <Container>
-                <StatusBar style='dark' />
-                <InnerContainer>
-                    <Logo resizeMode='cover' source={ImgLogo} />
-                    <SubTitle>Login</SubTitle>
-                    <Formik
-                        initialValues={{ email: '', password: '' }}
-                        onSubmit={(values, { setSubmitting }) => {
-                            if (values.email === '' || values.password === '') {
-                                handleMessage('Por favor preencha todos os campos');
-                                setSubmitting(false)
-                            }
-                            else {
-                                handleLogin(values, setSubmitting);
-                            }
-                        }}
-                    >
-                        {({ handleChange, handleBlur, handleSubmit, values, isSubmitting }) => (
-                            <FormArea>
-                                <TextInput
-                                    label='E-mail'
-                                    placeholder='Insira seu e-mail'
-                                    onChangeText={handleChange('email')}
-                                    onBlur={handleBlur('email')}
-                                    value={values.email}
-                                    keyboardType='email-address' />
-                                <TextInput
-                                    label='Senha'
-                                    placeholder='Insira sua senha'
-                                    onChangeText={handleChange('password')}
-                                    onBlur={handleBlur('password')}
-                                    value={values.password}
-                                    secureTextEntry={hidePassword}
-                                    isPassword={true}
-                                    hidePassword={hidePassword}
-                                    setHidePassword={setHidePassword} />
-                                <MsgBox type={messageType} >{message}</MsgBox>
-                                {!isSubmitting && <Button onPress={handleSubmit}>
-                                    <ButtonText>
-                                        ENTRAR
-                                    </ButtonText>
-                                </Button>}
-                                {isSubmitting && <Button disabled={true} >
-                                    <ActivityIndicator size='large' color='#fff' />
-                                </Button>}
-                                <ExtraView>
-                                    <TextLink>
-                                        <TextLinkContent
-                                            onPress={() => navigation.navigate('EmailValidation')}
-                                        >Esqueceu a senha?</TextLinkContent>
-                                    </TextLink>
-                                </ExtraView>
-                            </FormArea>
-                        )}
-                    </Formik>
-                </InnerContainer>
-            </Container>
-        </KeyboardAvoidingWrapper>
-
-    );
-}
+            <ExtraView>
+              <TextLink>
+                <TextLinkContent
+                  onPress={() => navigation.navigate("EmailValidation")}
+                >
+                  Esqueceu a senha?
+                </TextLinkContent>
+              </TextLink>
+            </ExtraView>
+          </FormArea>
+        </InnerContainer>
+      </Container>
+    </HeadContainer>
+  );
+};
 
 export default Login;

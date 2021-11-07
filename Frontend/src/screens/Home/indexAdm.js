@@ -6,17 +6,19 @@ import {
   ButtonText,
 } from "../../components/styles";
 import { StatusBar } from "expo-status-bar";
+
 import { Dimensions, FlatList, View } from "react-native";
 import Header from "../../components/header";
 import { HeadContainer } from "../../components/style";
 import ListaHorizontal from "../../components/FlatList/ListaHorizontal";
 import Anuncios from "../../data/anuncios";
 
-
 const { width} = Dimensions.get('window');
-const Home = () => {
-  const [list, setList] = useState(Anuncios);
+const HomeAdm = () => {
  
+ 
+  
+
 
   return (
     <HeadContainer>
@@ -32,17 +34,17 @@ const Home = () => {
         <View>
      
         <form //Rota do banco python
-            action="http://127.0.0.1:5000/create/anuncio"
+            action="http://127.0.0.1:5000/create/user"
             method="POST"
             encType="multipart/form-data"
           >
-            <input type="file" id="anuncio" name="anuncio" />
+            <input type="file" id="arq" name="arq" />
             <input type="submit" defaultValue="Submit" />
           </form>
 
 
           <Button>
-            <ButtonText>UPLOAD ANUNCIOS</ButtonText>
+            <ButtonText>UPLOAD USUARIOS</ButtonText>
           </Button>
         </View>
       </Container>
@@ -50,4 +52,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeAdm;
