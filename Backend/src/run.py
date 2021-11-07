@@ -1,17 +1,19 @@
 from flask import Flask
-import pandas as pd
-from bson.json_util import dumps
-import random
-import string
-from flask import jsonify, request
-import smtplib
 from flask import Flask, request
 from flask_pymongo import PyMongo, ObjectId
 from flask_cors import CORS
-import json
+from bson.json_util import dumps
+from flask import jsonify, request
+import smtplib
+import random
+import string
 import datetime
+import pandas as pd
 
-date_handler = lambda obj: (obj.isoformat() if isinstance(obj, (datetime.datetime, datetime.date, datetime.time))else None)
+
+date_handler = lambda obj: (obj.isoformat() if isinstance(obj, (datetime.datetime,
+                                                                datetime.date,
+                                                                datetime.time))else None)
 
 
 app = Flask(__name__)
@@ -83,21 +85,23 @@ def create():
         df.reset_index(inplace=True)
         x=0
         df = pd.DataFrame(data)
+        
         while x < (len(data)):
+            
             data[x]['id'] = mongo.db.usuarios.count()
             data[x]['senha'] = ''.join(random.choice(string.digits) for x in range(cod))
+            data[x]['status'] = 0
+            data[x]['cod'] = 0
+            data[x]['atividade'] = 0
+
+            email = data[x]['email']
+            senha = data[x]['senha']
+            Cadastro.sender_email(email, senha)
             mongo.db.usuarios.insert_one(data[x])
             x+=1       
-            b = 0
-        while b < (len(data)):
-            email = data[b]['email']
-            senha = data[b]['senha']
-            b+=1
-            Cadastro.sender_email(email, senha)
-            return 'Arquivo enviado com sucesso!'
 
-
-    
+        return 'Arquivo enviado com sucesso!'
+ 
 #lista todos os usuarios
 @app.route('/listar/usuarios', methods = ["GET"])
 def users():
@@ -159,15 +163,13 @@ def update_user(id):
                                 'status': _status,
                                 'cod': _cod,
                                 'atividade': _atividade}})
-
+    return "200"
 #exclui usuario
 @app.route('/deletar/usuario/<id>', methods=["PUT"])
 def delete_user(id):
-    _json = request.json
-    _atividade = _json['atividade']
-    mongo.db.usuarios.find_one_and_update(
-        {'id':int(id)}, {"$set":{'atividade': _atividade}})
-    resp = jsonify("usuario atualizado")
+
+    mongo.db.usuarios.find_one_and_delete({'id':int(id)})
+    resp = jsonify("usuario deletado ")
     return resp
 
 #login
@@ -178,7 +180,7 @@ def login_user():
     _email = _json['email']
     _senha = _json['senha']
 
-    find_user = mongo.db.usuarios.find({'email' : _email, 'senha' : _senha})
+    find_user = mongo.db.usuarios.find({'email' : _email, 'senha': _senha})
     not_found = jsonify("usuario não encontrado")
     resp = dumps(find_user)
 
@@ -196,7 +198,6 @@ def update_senha(id):
         {'id':int(id)}, {"$set":{'senha': _senha, 'status': 1}})
     resp = jsonify("senha atualizada com sucesso")
     return resp
-
 
 #esqueceu a senha
 @app.route('/redefinesenha', methods = ["POST"])
@@ -253,8 +254,7 @@ def lista_anuncio():
             'cpf_anunciante': doc['cpf_anunciante'],
             'valor_veiculo': doc['valor_veiculo'],
             'id': doc['id'],
-            'img': doc['img']
-        })
+            'img': doc['img']})
     return jsonify(anuncios)
 
 #lista anuncio por cpf do usuario
@@ -272,8 +272,7 @@ def anuncio(cpf_anunciante):
       'cpf_anunciante': anuncios['cpf_anunciante'],
       'valor_veiculo': anuncios['valor_veiculo'],
       'id': anuncios['id'],
-      'img': anuncios['img']
-  })
+      'img': anuncios['img']})
   
 #Lista anuncio especifico
 @app.route('/anuncio/<id>', methods=['GET'])
@@ -288,9 +287,7 @@ def getAnuncio(id):
       'ano_fabricacao': anuncio['ano_fabricacao'],
       'ano_modelo': anuncio[ 'ano_modelo'],
       'cpf_anunciante': anuncio['cpf_anunciante'],
-      'valor_veiculo': anuncio['valor_veiculo']
-     
-  })
+      'valor_veiculo': anuncio['valor_veiculo']})
 
 #exclui anuncio
 @app.route('/anuncios/<id>', methods=['DELETE'])
@@ -308,10 +305,8 @@ def updateAnuncios(id):
          'cod_anunciante': request.json['cod_anunciante'],
          'ano_fabricacao': request.json['ano_fabricacao'],
          'ano_modelo': request.json['ano_modelo'],
-         'cpf_anunciante': request.json['cpf_anunciante'],
-         'valor_veiculo': request.json['valor_veiculo'],
-         'id': request.json['id'],
-         'img': request.json['img']}})
+         'valor_veiculo': request.json['valor_veiculo']}})
+     
      return jsonify({'message': 'Anuncio atualizado'})
  
 if __name__ == "__main__":
