@@ -98,7 +98,7 @@ Essa ferramenta será configurada para Gerenciar anúncios de Carros visando a f
 | ------ | ------ |
 |    19/09/2021   |[Sprint 1](https://github.com/JodanGalas/ByCar_Projeto_Integrador/releases/tag/V1.0)|
 |    10/10/2021   |[Sprint 2](https://github.com/JodanGalas/ByCar_Projeto_Integrador/releases/tag/V2.0)
-|    07/11/2021   |[Sprint 3]
+|    07/11/2021   |[Sprint 3](https://github.com/JodanGalas/ByCar_Projeto_Integrador/releases/tag/v2.2)
 |    28/11/2021   |[Sprint 4]
 
 
