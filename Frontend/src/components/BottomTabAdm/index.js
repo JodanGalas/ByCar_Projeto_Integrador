@@ -1,12 +1,11 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '../../screens/Home';
+
 import HomeAdm from '../../screens/Home/indexAdm';
-import Profile from '../../screens/Profile';
-import SearchAdm from '../../screens/SeacrchAdm';
-import Ads from '../../screens/Ads';
-import Chat from '../../screens/Chat';
+import Usuarios from '../../screens/SeacrchAdm/indexUsuario.js';
+import Relatorio from '../../screens/relatorio';
+import SearchAdm from '../../screens/SeacrchAdm/index';
 import ChatRoom from '../../screens/Chat/ChatRoom';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../styles';
@@ -18,18 +17,16 @@ const icons = {
     Home: {
         name: 'home'
     },
-    Search: {
-        name: 'search'
+    Relatorios: {
+        name: 'analytics'
     },
-    Ads: {
+    Anuncios: {
         name: 'car'
     },
-    Profile: {
-        name: 'person'
+    Usuarios: {
+        name: 'list'
     },
-    ChatRoom: {
-        name: 'chatbubbles'
-    },
+  
 }
 
 const BottomTab = () => {
@@ -62,22 +59,18 @@ const BottomTab = () => {
                 component={HomeAdm}
             />
             <Tab.Screen
-                name='Search'
+                name='Relatorios'
+                component={Relatorio}
+            />
+            <Tab.Screen
+                name='Anuncios'
                 component={SearchAdm}
             />
             <Tab.Screen
-                name='Ads'
-                component={Ads}
+                name='Usuarios'
+                component={Usuarios}
             />
-            <Tab.Screen
-                name='Profile'
-                component={Profile}
-            />
-            <Tab.Screen
-                name='ChatRoom' 
-                component={ChatRoom}
-                
-            />
+           
         </Tab.Navigator>
     )
 }

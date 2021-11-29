@@ -9,39 +9,29 @@ import { useAuth } from "../context/auth";
 
 const AuthStack = createStackNavigator();
 
-
 const AuthRoutes = () => {
+  const { user, setUser } = useAuth();
+
   return (
-   
-        <AuthStack.Navigator
-          independent={true}
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: "transparent",
-            },
-            headerTintColor: "#3F37C9",
-            headerTransparent: true,
-            headerTitle: "",
-            headerLeftContainerStyle: {
-              paddingLeft: 20,
-            },
-          }}
-          initialRouteName="Login"
-        >
-         
-              
-              <AuthStack.Screen name="PasswordRecovery" component={PasswordRecovery}/>
-          
-           
-              <AuthStack.Screen name="Login" component={Login} />
-              <AuthStack.Screen name="EmailValidation" component={EmailValidation}/>
-              <AuthStack.Screen name="CodeValidation" component={CodeValidation} />
-
-           
-       
-        </AuthStack.Navigator>
-    
-
+    <AuthStack.Navigator
+      independent={true}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "transparent",
+        },
+        headerTintColor: "#3F37C9",
+        headerTransparent: true,
+        headerTitle: "",
+        headerLeftContainerStyle: {
+          paddingLeft: 20,
+        },
+      }}
+      initialRouteName="Login"
+    >
+      <AuthStack.Screen name="Login" component={Login} />
+      <AuthStack.Screen name="EmailValidation" component={EmailValidation} />
+      <AuthStack.Screen name="CodeValidation" component={CodeValidation} />
+    </AuthStack.Navigator>
   );
 };
 

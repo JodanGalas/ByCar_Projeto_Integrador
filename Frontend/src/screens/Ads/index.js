@@ -1,29 +1,34 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SubTitle } from "../../components/styles";
 import { StatusBar } from "expo-status-bar";
-import { Button, Icon } from "react-native-elements";
 import {
-  ItemImage,
   BasicContainer,
   Item,
+  ItemImage,
+  ViewContainerAnuncio,
   ItemTitle,
-  ContainerAnuncio,
   ContainerInfo,
+  ContainerAnuncio,
 } from "../../components/style";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import SearchInput from "../../components/Input/searchInput";
-import { Alert, FlatList, ScrollView, View } from "react-native";
-import { HeadContainer } from "../../components/style";
-import Header from "../../components/header";
-//import AuthContext  from "../../context/auth";
+import {
+  FlatList,
+  ScrollView,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 import { useAuth } from "../../context/auth";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Ads = ({ navigation, route }) => {
   const [searchText, setSearchText] = useState("");
   const [list, setList] = useState();
+  const [arquivo, setArquivo] = useState(list);
+  const [doc, setDoc] = useState();
+  const [pausar, setPausar] = useState(false);
 
   const { user, setUser } = useAuth();
-  //const {user, setUser} = useContext(AuthContext);
 
   const { cpf } = user;
 
@@ -34,7 +39,7 @@ const Ads = ({ navigation, route }) => {
 
   //Rota de deletar anuncio
   const Deletion = async (id) => {
-    const res = await fetch(`http://127.0.0.1:5000/anuncios/${id}`, {
+    const res = await fetch(`http://192.168.0.16:5000/anuncios/${id}`, {
       method: "DELETE",
     });
   };
@@ -43,7 +48,7 @@ const Ads = ({ navigation, route }) => {
   useEffect(() => {
     if (searchText === "") {
       getAnuncio(cpf);
-      pegarValor()
+
       setList(list);
     } else {
       setList(
@@ -58,35 +63,67 @@ const Ads = ({ navigation, route }) => {
   //Rota de pegar anuncio
   const getAnuncio = async (cpf_anunciante) => {
     const res = await fetch(
-      `http://127.0.0.1:5000/listar/anuncio/${cpf_anunciante}`
+      `http://192.168.0.16:5000/listar/anuncio/${cpf_anunciante}`
     );
     const anuncios = await res.json();
-    console.log(anuncios);
-    setList([anuncios]);
+    setList(anuncios);
   };
 
-  async function pegarValor(){
-    const myuser = await AsyncStorage.getItem('user')
-    console.log(myuser)
-}
+  const VisuPausar = async (Id) => {
+    const res = await fetch(`http://192.168.0.16:5000/atualizar/visu/${Id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        visualizacao: 0,
+      }),
+    });
+    const pausar = await res.json();
+    console.log(pausar);
+  };
 
-
-pegarValor();
+  const VisuDesPausar = async (Id) => {
+    const res = await fetch(`http://192.168.0.16:5000/atualizar/visu/${Id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        visualizacao: 1,
+      }),
+    });
+    const pausar = await res.json();
+    console.log(pausar);
+  };
 
   return (
-    <HeadContainer>
-      <Header />
-      <BasicContainer>
-        <StatusBar style="dark" />
-        <ScrollView>
-          <SearchInput
-            placeholder="Pesquisar"
-            value={searchText}
-            onChangeText={(t) => setSearchText(t)}
-            //placeholderTextColor="#fff"
-          />
-          <SubTitle>Seus anuncios...</SubTitle>
+    <ImageBackground
+      source={require("../images/back.png")}
+      style={{ width: "100%", height: "100%" }}
+    >
+      <StatusBar style="dark" />
 
+      <BasicContainer>
+        <SearchInput
+          value={searchText}
+          onChangeText={(t) => setSearchText(t)}
+          placeholder="Pesquisar"
+        />
+        <SubTitle>Seus Anuncios...</SubTitle>
+
+        <form //Rota do banco python
+          action="http://192.168.0.16:5000/create/anuncio"
+          method="POST"
+          encType="multipart/form-data"
+        >
+          <input type="file" id="anuncio" name="anuncio" />
+          <input type="submit" defaultValue="Submit" />
+        </form>
+      </BasicContainer>
+
+      <ScrollView>
+        <BasicContainer>
           <FlatList
             data={list}
             //Rendereziar somente o item do valor pedro henrique
@@ -97,24 +134,65 @@ pegarValor();
                 </ContainerInfo>
 
                 <ItemImage source={item.img} />
+
                 <ContainerAnuncio>
-                  <Button
-                    onPress={() => showDetails(item)}
-                    type="clear"
-                    icon={<Icon name="edit" size={25} color="#36343A" />}
-                  />
-                  <Button
-                    onPress={() => Deletion(item._id)}
-                    type="clear"
-                    icon={<Icon name="delete" size={25} color="#36343A" />}
-                  />
+                  <ViewContainerAnuncio>
+                    <TouchableOpacity>
+                      <Icon
+                        onPress={() => Deletion(item._id)}
+                        name="delete"
+                        size={25}
+                        color="#36343A"
+                        style={{ width: 20, padding: 2, marginLeft: 5 }}
+                      />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                      <Icon
+                        onPress={() => showDetails(item)}
+                        name="lead-pencil"
+                        size={25}
+                        color="#36343A"
+                        style={{ marginLeft: 15, padding: 2 }}
+                      />
+                    </TouchableOpacity>
+
+                    <Icon
+                      onPress={() => setPausar(true)}
+                      name="eye"
+                      size={25}
+                      color="#36343A"
+                      style={{ marginLeft: 70, padding: 2 }}
+                    />
+                    <View>{item.views}</View>
+
+                    <TouchableOpacity>
+                      {item.visualizacao === 0 ? (
+                        <Icon
+                          onPress={() => VisuDesPausar(item.id)}
+                          name="play-pause"
+                          size={25}
+                          color="#36343A"
+                          style={{ marginLeft: 15, padding: 2 }}
+                        />
+                      ) : (
+                        <Icon
+                          onPress={() => VisuPausar(item.id)}
+                          name="pause"
+                          size={25}
+                          color="#36343A"
+                          style={{ marginLeft: 15, padding: 2 }}
+                        />
+                      )}
+                    </TouchableOpacity>
+                  </ViewContainerAnuncio>
                 </ContainerAnuncio>
               </Item>
             )}
           />
-        </ScrollView>
-      </BasicContainer>
-    </HeadContainer>
+        </BasicContainer>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

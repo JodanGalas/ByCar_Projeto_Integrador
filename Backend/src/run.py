@@ -1,19 +1,18 @@
 from flask import Flask
+import pandas as pd
+from bson.json_util import dumps
+import random
+import string
+from flask import jsonify, request
+import smtplib
 from flask import Flask, request
 from flask_pymongo import PyMongo, ObjectId
 from flask_cors import CORS
-from bson.json_util import dumps
-from flask import jsonify, request
-import smtplib
-import random
-import string
+from flask_swagger_ui import get_swaggerui_blueprint
+import json
 import datetime
-import pandas as pd
 
-
-date_handler = lambda obj: (obj.isoformat() if isinstance(obj, (datetime.datetime,
-                                                                datetime.date,
-                                                                datetime.time))else None)
+date_handler = lambda obj: (obj.isoformat() if isinstance(obj, (datetime.datetime, datetime.date, datetime.time))else None)
 
 
 app = Flask(__name__)
@@ -21,6 +20,7 @@ app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb+srv://jsoeiro:1234@bycardb.lrp4p.mongodb.net/dbycar' #conexao com o mongo 
 mongo = PyMongo(app)
 CORS(app)
+
 
 
 class Cadastro:    
@@ -85,9 +85,7 @@ def create():
         df.reset_index(inplace=True)
         x=0
         df = pd.DataFrame(data)
-        
         while x < (len(data)):
-            
             data[x]['id'] = mongo.db.usuarios.count()
             data[x]['senha'] = ''.join(random.choice(string.digits) for x in range(cod))
             data[x]['status'] = 0
@@ -96,18 +94,32 @@ def create():
 
             email = data[x]['email']
             senha = data[x]['senha']
+            print(email)
+            print(senha)
             Cadastro.sender_email(email, senha)
             mongo.db.usuarios.insert_one(data[x])
-            x+=1       
+            mongo.db.dadosbkp.insert_one(data[x])
 
+            x+=1 
+        mongo.db.dadosbkp.update_many(
+        {}, 
+        { "$unset": {  'nome': "", 'telefone': "",'endereco': "", 'senha': "", 'status': "", 'cod': "", 
+        'atividade': "", 'cpf': "" }}
+        )      
+     
+
+       
         return 'Arquivo enviado com sucesso!'
- 
+
+
+    
 #lista todos os usuarios
 @app.route('/listar/usuarios', methods = ["GET"])
 def users():
     users = []
     for usuario in mongo.db.usuarios.find():
-        users.append({
+        if usuario['cod'] == 0:
+            users.append({
             '_id' : str(ObjectId(usuario['_id'])),
             'nome' : usuario['nome'],
             'cpf' : usuario['cpf'],
@@ -120,6 +132,14 @@ def users():
             'cod' : usuario['cod'],
             'atividade' : usuario['atividade']})
         
+    return jsonify(users)
+
+
+#Quantos usuarios tem no total 
+@app.route('/quantos/usuarios', methods = ["GET"])
+def quantosUsers():
+    
+    users = mongo.db.usuarios.find({"cod": 0}).count()
     return jsonify(users)
 
 #lista usuario por id
@@ -145,25 +165,23 @@ def update_user(id):
     _json = request.json
     _nome = _json['nome']
     _cpf = _json['cpf']
+  
     _email = _json['email']
     _telefone = _json['telefone']
     _endereco = _json['endereco']
-    _senha = _json['senha']
-    _status = _json['status']
-    _cod = _json['cod']
-    _atividade = _json['atividade']
-    mongo.db.usuarios.find_one_and_update(
+   
+    find_user =mongo.db.usuarios.find_one_and_update(
         {'id':int(id)}, {"$set":{
                                 'nome' : _nome,
                                 'cpf': _cpf, 
+                                
                                 'email': _email,
                                 'telefone': _telefone,
-                                'endereco': _endereco,
-                                'senha': _senha,
-                                'status': _status,
-                                'cod': _cod,
-                                'atividade': _atividade}})
-    return "200"
+                                'endereco': _endereco,}})
+   
+    resp = dumps(find_user)
+    print(resp)
+    return resp
 #exclui usuario
 @app.route('/deletar/usuario/<id>', methods=["PUT"])
 def delete_user(id):
@@ -199,6 +217,7 @@ def update_senha(id):
     resp = jsonify("senha atualizada com sucesso")
     return resp
 
+
 #esqueceu a senha
 @app.route('/redefinesenha', methods = ["POST"])
 def redefine_senha():
@@ -213,7 +232,8 @@ def redefine_senha():
     if (len(resp)) > 2:
         senha = ''.join(random.choice(string.digits) for x in range(cod))
         mongo.db.usuarios.find_one_and_update({'email' : _email}, {"$set":{'senha': senha}})
-        Cadastro.sender_email_1(email, senha)
+        #Cadastro.sender_email_1(email, senha)
+        Cadastro.sender_email_1( senha)
         return resp
     else:
         return not_found
@@ -226,16 +246,29 @@ def create_anuncio():
     if 'anuncio' in request.files:
         anuncio = request.files['anuncio']     
         dfa = pd.read_csv(anuncio)
-        data_anuncio = dfa.to_dict(orient="records")  
+        data_anuncio = dfa.to_dict(orient="records")
+        dfa['visualizacao'] = 1 
+        dfa['views'] = 0  
         dfa['id'] = 0 
-        dfa['img'] = 'https://th.bing.com/th/id/R.84766ecb6e23c491e433c7ebda1ef732?rik=4kevuwyE0wQ9%2bg&riu=http%3a%2f%2fmotori.quotidiano.net%2fwp-content%2fuploads%2f2020%2f12%2fChevrolet-Camaro-La-settima-generazione-non-arriver%c3%a0-prima-del-2026.jpg&ehk=NCLj0Nmrec%2fx%2bPjN%2bXqacDBRDZ8DXu%2fn%2f3XnEcB5Dy0%3d&risl=&pid=ImgRaw&r=0'
+        dfa['img'] = 'https://th.bing.com/th/id/R.859796299b2bfc24f75d0dc6eb419518?rik=JNrJ%2fvPAhXR8%2fA&riu=http%3a%2f%2fauto-drive.pt%2fwp-content%2fuploads%2f2020%2f04%2f2011-ferrari-599-gto-for-sale-at-mecum-auctions-indy-2020.jpg&ehk=C3LVKXTzYarNgKOUw7NdlVGoljOEYth8V7zI4r%2bl%2bsY%3d&risl=&pid=ImgRaw&r=0'
         x=0
         dfa = pd.DataFrame(data_anuncio) 
         while x < (len(data_anuncio)):
+            data_anuncio[x]['visualizacao'] = 1 
+            data_anuncio[x]['views'] = 0 
             data_anuncio[x]['id'] = mongo.db.anuncios.count()
-            data_anuncio[x]['img'] = 'https://th.bing.com/th/id/R.84766ecb6e23c491e433c7ebda1ef732?rik=4kevuwyE0wQ9%2bg&riu=http%3a%2f%2fmotori.quotidiano.net%2fwp-content%2fuploads%2f2020%2f12%2fChevrolet-Camaro-La-settima-generazione-non-arriver%c3%a0-prima-del-2026.jpg&ehk=NCLj0Nmrec%2fx%2bPjN%2bXqacDBRDZ8DXu%2fn%2f3XnEcB5Dy0%3d&risl=&pid=ImgRaw&r=0'
+            data_anuncio[x]['img'] = 'https://th.bing.com/th/id/R.859796299b2bfc24f75d0dc6eb419518?rik=JNrJ%2fvPAhXR8%2fA&riu=http%3a%2f%2fauto-drive.pt%2fwp-content%2fuploads%2f2020%2f04%2f2011-ferrari-599-gto-for-sale-at-mecum-auctions-indy-2020.jpg&ehk=C3LVKXTzYarNgKOUw7NdlVGoljOEYth8V7zI4r%2bl%2bsY%3d&risl=&pid=ImgRaw&r=0'
             mongo.db.anuncios.insert_one(data_anuncio[x])
-            x+=1     
+            mongo.db.anubkp.insert_one(data_anuncio[x])
+            
+            x+=1       
+        mongo.db.anubkp.update_many(
+        {}, 
+        { "$unset": {  'cpf_anunciante': ""}}
+        )      
+    
+   
+
     return 'Arquivo enviado com sucesso!'
 
 #lista todos os anuncios
@@ -243,36 +276,143 @@ def create_anuncio():
 def lista_anuncio():
     anuncios = []
     for doc in mongo.db.anuncios.find():
-        anuncios.append({
-            '_id': str(ObjectId(doc['_id'])),
-            'fabricante': doc['fabricante'],
-            'desc_marca': doc['desc_marca'],
-            'desc_veiculo': doc['desc_veiculo'],
-            'cod_anunciante': doc['cod_anunciante'],
-            'ano_fabricacao': doc['ano_fabricacao'],
-            'ano_modelo': doc['ano_modelo'],
-            'cpf_anunciante': doc['cpf_anunciante'],
-            'valor_veiculo': doc['valor_veiculo'],
-            'id': doc['id'],
-            'img': doc['img']})
+        if doc['visualizacao'] == 1:
+            anuncios.append({
+                '_id': str(ObjectId(doc['_id'])),
+                'fabricante': doc['fabricante'],
+                'desc_marca': doc['desc_marca'],
+                'desc_veiculo': doc['desc_veiculo'],
+                'cod_anunciante': doc['cod_anunciante'],
+                'ano_fabricacao': doc['ano_fabricacao'],
+                'ano_modelo': doc['ano_modelo'],
+                'cpf_anunciante': doc['cpf_anunciante'],
+                'valor_veiculo': doc['valor_veiculo'],
+                'id': doc['id'],
+                'email': doc['email'],
+                'img': doc['img'],
+                'visualizacao': doc['visualizacao'],
+                'views': doc['views']
+            })
+    return jsonify(anuncios)
+
+
+#lista todos os anuncios sem verificar se esta pausado ou não 
+@app.route('/listar/anunciosADM', methods = ["GET"])
+def lista_anuncioADM():
+    anuncios = []
+    for doc in mongo.db.anuncios.find():
+            anuncios.append({
+                '_id': str(ObjectId(doc['_id'])),
+                'fabricante': doc['fabricante'],
+                'desc_marca': doc['desc_marca'],
+                'desc_veiculo': doc['desc_veiculo'],
+                'cod_anunciante': doc['cod_anunciante'],
+                'ano_fabricacao': doc['ano_fabricacao'],
+                'ano_modelo': doc['ano_modelo'],
+                'cpf_anunciante': doc['cpf_anunciante'],
+                'valor_veiculo': doc['valor_veiculo'],
+                'id': doc['id'],
+                'email': doc['email'],
+                'img': doc['img'],
+                'visualizacao': doc['visualizacao'],
+                'views': doc['views']
+            })
+    return jsonify(anuncios)
+
+
+
+#lista 5 anuncios para recomendados da pagina home. 
+@app.route('/listar5/anuncios', methods = ["GET"])
+def lista5anuncio():
+    anuncios = []
+    for doc in mongo.db.anuncios.find().limit(5):
+        if doc['visualizacao'] == 1:
+            anuncios.append({
+                '_id': str(ObjectId(doc['_id'])),
+                'fabricante': doc['fabricante'],
+                'desc_marca': doc['desc_marca'],
+                'desc_veiculo': doc['desc_veiculo'],
+                'cod_anunciante': doc['cod_anunciante'],
+                'ano_fabricacao': doc['ano_fabricacao'],
+                'ano_modelo': doc['ano_modelo'],
+                'cpf_anunciante': doc['cpf_anunciante'],
+                'valor_veiculo': doc['valor_veiculo'],
+                'id': doc['id'],
+                'email': doc['email'],
+                'img': doc['img'],
+                'visualizacao': doc['visualizacao'],
+                'views': doc['views']
+            })
     return jsonify(anuncios)
 
 #lista anuncio por cpf do usuario
 @app.route('/listar/anuncio/<cpf_anunciante>', methods = ["GET"])
 def anuncio(cpf_anunciante):
-    anuncios = mongo.db.anuncios.find_one({'cpf_anunciante': int(cpf_anunciante)})
-    return jsonify({ 
-      '_id': str(ObjectId(anuncios['_id'])),
-      'fabricante' : anuncios['fabricante'],
-      'desc_marca': anuncios['desc_marca'], 
-      'desc_veiculo': anuncios['desc_veiculo'],
-      'cod_anunciante': anuncios['cod_anunciante'],
-      'ano_fabricacao': anuncios['ano_fabricacao'],
-      'ano_modelo': anuncios[ 'ano_modelo'],
-      'cpf_anunciante': anuncios['cpf_anunciante'],
-      'valor_veiculo': anuncios['valor_veiculo'],
-      'id': anuncios['id'],
-      'img': anuncios['img']})
+    anuncios = []
+    for doc in mongo.db.anuncios.find({'cpf_anunciante': int(cpf_anunciante)}):
+        anuncios.append({    
+           '_id': str(ObjectId(doc['_id'])),
+           'fabricante' : doc['fabricante'],
+           'desc_marca':doc['desc_marca'], 
+           'desc_veiculo': doc['desc_veiculo'],
+           'cod_anunciante': doc['cod_anunciante'],
+           'ano_fabricacao': doc['ano_fabricacao'],
+           'ano_modelo': doc[ 'ano_modelo'],
+           'cpf_anunciante': doc['cpf_anunciante'],
+           'valor_veiculo': doc['valor_veiculo'],
+           'email': doc['email'],
+           'id': doc['id'],
+           'img': doc['img'],
+           'visualizacao': doc['visualizacao'],
+           'views': doc['views']
+        })
+    return jsonify(anuncios)
+
+
+
+
+#Contar quantos anuncios o anunciante tem
+@app.route('/quantos/anunciosAtivos/<cpf_anunciante>', methods = ["GET"])
+def quantos(cpf_anunciante):
+
+    anuncios = mongo.db.anuncios.find({'cpf_anunciante': int(cpf_anunciante), "visualizacao": 1}).count()
+    return jsonify(anuncios)
+
+
+
+#Contar quantos anuncios no total o sistema tem 
+@app.route('/quantos/anuncios', methods = ["GET"])
+def quantosGeral():
+
+    anuncios = mongo.db.anuncios.find().count()
+    return jsonify(anuncios)
+
+    
+#lista quantos anuncios ativos temos
+@app.route('/ativos/anuncios', methods = ["GET"])
+def anunciosAtivos():
+ 
+    anuncios = mongo.db.anuncios.find({"visualizacao": 1}).count()   
+    return jsonify(anuncios)
+
+
+#lista quantos anuncios pausados temos
+@app.route('/pausados/anuncios', methods = ["GET"])
+def aanunciosPausados():
+ 
+    anuncios = mongo.db.anuncios.find({"visualizacao": 0}).count()   
+    return jsonify(anuncios)
+
+
+#lista quantos anuncios despausados temos
+@app.route('/quantas/views', methods = ["GET"])
+def quantasViews():
+ 
+    anuncios = mongo.db.anuncios.find({"views"}).count()   
+    return jsonify(anuncios)
+
+
+  
   
 #Lista anuncio especifico
 @app.route('/anuncio/<id>', methods=['GET'])
@@ -287,7 +427,9 @@ def getAnuncio(id):
       'ano_fabricacao': anuncio['ano_fabricacao'],
       'ano_modelo': anuncio[ 'ano_modelo'],
       'cpf_anunciante': anuncio['cpf_anunciante'],
-      'valor_veiculo': anuncio['valor_veiculo']})
+      'valor_veiculo': anuncio['valor_veiculo']
+     
+  })
 
 #exclui anuncio
 @app.route('/anuncios/<id>', methods=['DELETE'])
@@ -297,17 +439,35 @@ def deleteAnuncios(id):
 
 @app.route('/atualizar/anuncio/<id>', methods=["PUT"])
 def updateAnuncios(id):
-     print(request.json)
      mongo.db.anuncios.update_one({'id': int(id)}, {"$set": {
          'fabricante': request.json['fabricante'],
          'desc_marca': request.json['desc_marca'],
          'desc_veiculo': request.json['desc_veiculo'],
          'cod_anunciante': request.json['cod_anunciante'],
          'ano_fabricacao': request.json['ano_fabricacao'],
+         'email': request.json['email'],
          'ano_modelo': request.json['ano_modelo'],
-         'valor_veiculo': request.json['valor_veiculo']}})
-     
+         'valor_veiculo': request.json['valor_veiculo'],
+        }})
      return jsonify({'message': 'Anuncio atualizado'})
+
+@app.route('/atualizar/view/<id>', methods=["POST"])
+def updateViewAnuncio(id):
+
+     mongo.db.anuncios.update_one({'id': int(id)}, {"$set": {'views': request.json['views'] + 1}})
+     view = mongo.db.anuncios.find_one({'id': int(id)})
+     print(view)
+     return jsonify({'views': view['views']})
+
+
+@app.route('/atualizar/visu/<id>', methods=["POST"])
+def updateVisuAnuncio(id):
+
+     mongo.db.anuncios.update_one({'id': int(id)}, {"$set": {'visualizacao': request.json['visualizacao']}})
+     visualizacao = mongo.db.anuncios.find_one({'id': int(id)})
+     print(visualizacao)
+     return jsonify({'visualizacao': visualizacao['visualizacao']})
+     
  
 if __name__ == "__main__":
-    app.run()
+    app.run(host = "192.168.0.16", port = "5000")

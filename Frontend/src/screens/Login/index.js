@@ -1,8 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Container,
   InnerContainer,
-  Logo,
   SubTitlelogin,
   FormArea,
   Button,
@@ -17,17 +16,16 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import Header from "../../components/header/headerLogin";
 import { HeadContainer } from "../../components/style";
 import { useAuth } from "../../context/auth";
-
+import { api } from '../../services/api';
 
 const Login = ({ navigation }) => {
   const { user, setUser } = useAuth();
-
 
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
 
   const SignIn = async () => {
-    const res = await fetch(`http://127.0.0.1:5000/login`, {
+    const res = await fetch(`http://192.168.0.16:5000/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,11 +36,13 @@ const Login = ({ navigation }) => {
       }),
     });
     const usuario = await res.json();
+    console.log(usuario[0]);
+    usuario[0].estaLogado = true;
+
     setUser(usuario[0]);
-    AsyncStorage.setItem("user", usuario[0])
+    AsyncStorage.setItem("user", JSON.stringify(usuario[0]));
   };
 
-  
   return (
     <HeadContainer>
       <Header />
@@ -61,6 +61,8 @@ const Login = ({ navigation }) => {
             <TextInput
               label="Senha"
               placeholder="Insira sua senha"
+           
+              secureTextEntry
               onChangeText={(value) => setSenha(value)}
             />
 
